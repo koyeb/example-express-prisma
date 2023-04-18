@@ -63,7 +63,8 @@ On the [Koyeb Control Panel](//app.koyeb.com/apps), click the **Create App** but
 2. In the repositories list, select the repository you just forked
 3. Specify the branch to deploy, in this case `main`
 4. Add an environment variables `DATABASE_URL` and set the connection string to your database as value
-5. Then, give your App a name, i.e `express-prisma-on-koyeb`, and click **Create App.**
+5. Set `npm run postgres:init` *or* `npm run mysql:init` *or* `npm run mongodb:init` *or* `npm run cockroachdb:init` depending of your backend as the git build command
+6. Then, give your App a name, i.e `express-prisma-on-koyeb`, and click **Create App.**
 
 You land on the deployment page where you can follow the build of your Node Express application using Prisma. Once the build is completed, your application is being deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
 
