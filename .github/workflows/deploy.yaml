@@ -23,7 +23,7 @@ jobs:
         uses: koyeb/action-git-deploy/secret@v1
         with:
           secret-name: EXPRESS_PRISMA_DATABASE_URL
-          secret-value: "${{ secrets.MYSQL_URL }}"
+          secret-value: "${{ secrets.POSTGRES_URL }}"
 
       - name: Build and deploy the application
         uses: koyeb/action-git-deploy@v1
