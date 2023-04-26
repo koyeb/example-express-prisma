@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "license": "MIT",
     "scripts": {
-        "mongodb:init": "npx prisma db push --schema=./prisma/schema.mongodb.prisma && npx prisma db seed",
-        "postgres:init": "npx prisma db push --schema=./prisma/schema.postgres.prisma && npx prisma db seed",
-        "mysql:init": "npx prisma db push --schema=./prisma/schema.mysql.prisma && npx prisma db seed",
-        "cockroachdb:init": "npx prisma db push --schema=./prisma/schema.cockroachdb.prisma && npx prisma db seed",
+        "mongodb:init": "npx prisma db push --force-reset --schema=./prisma/schema.mongodb.prisma && npx prisma db seed",
+        "postgres:init": "npx prisma db push --force-reset --schema=./prisma/schema.postgres.prisma && npx prisma db seed",
+        "mysql:init": "npx prisma db push --force-reset --schema=./prisma/schema.mysql.prisma && npx prisma db seed",
+        "cockroachdb:init": "npx prisma db push --force-reset --schema=./prisma/schema.cockroachdb.prisma && npx prisma db seed",
         "start": "ts-node src/server.ts"
     },
     "engines": {
