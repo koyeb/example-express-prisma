@@ -33,3 +33,4 @@ jobs:
           service-ports: "3000:http"
           service-routes: "/:3000"
           git-build-command: npm run postgres:init
+          skip-cache: true
