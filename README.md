@@ -35,7 +35,7 @@ You need a Koyeb account to successfully deploy and run this application. If you
 ### On your machine
 
 #### Create and seed the database
-Run the following command to create the database. This also creates the Planet table that is defined in prisma/schema.prisma:
+Run the following command to create the database. This also creates the Planet table that is defined in `prisma/schema.prisma`:
 
 ```
 DATABASE_URL="postgres://..." npx prisma migrate dev --name init
@@ -46,9 +46,9 @@ DATABASE_URL="postgres://..." npx prisma db seed
 
 The fastest way to deploy the Node Express application using Prisma is to click the **Deploy to Koyeb** button below.
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)]()
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=main&type=git&repository=koyeb%2Fexample-express-prisma&branch=main&builder=buildpack&build_command=npm+run+postgres%3Ainit&instance_type=nano&env%5BDATABASE_URL%5D=CHANGE_ME&ports=3000%3Bhttp%3B%2F)
 
-Clicking on this button brings you to the Koyeb App creation page with everything pre-set to launch this application.
+Clicking on this button brings you to the Koyeb App creation page with everything pre-set to launch this application.  Modify the value of the `DATABASE_URL` environment variable to your database connection string before deploying.
 
 _To modify this application example, you will need to fork this repository. Checkout the [fork and deploy](#fork-and-deploy-to-koyeb) instructions._
 

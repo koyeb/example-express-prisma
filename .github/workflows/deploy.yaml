@@ -32,5 +32,6 @@ jobs:
           service-env: "DATABASE_URL=@EXPRESS_PRISMA_DATABASE_URL"
           service-ports: "3000:http"
           service-routes: "/:3000"
+          git-builder: "buildpack"
           git-build-command: npm run postgres:init
           skip-cache: true
